@@ -5,11 +5,11 @@ class Header extends React.Component {
         return (<h1>Tech Returners Quiz</h1>)
     }
 };
-
-const styles = {
+//commenting this out for now until we have decided on styles
+/*const styles = {
     header : {
-        
+
     }
-}
+}*/
 
 export default Header; 

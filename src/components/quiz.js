@@ -1,12 +1,8 @@
 import React from 'react';
 import quizData from './quizData';
 
-console.log(quizData);
 
 class Quiz extends React.Component {
-
-    
-
 
     render() {
 
@@ -15,10 +11,10 @@ class Quiz extends React.Component {
         <div className = "container">
 
             <div className = "row">
-            <p>Question 1 some text goes here</p>
+            <p style = {styles.question} >Question 1: some text goes here</p>
             </div>
             <div className = "row">
-            <button type = "button" style = {styles.button}>Answer 1</button>
+            <button type = "button" style = {styles.button}>Answer 1 The first answer goes here and the button might need to be bigger</button>
             </div>
             
             <div className = "row">
@@ -40,7 +36,13 @@ class Quiz extends React.Component {
 
 const styles = {
     button: {
-       margin: "10px"
+       margin: "10px",
+       width: "400px",
+       height: "50px"
+    },
+
+    question: {
+        fontSize: 30
     }
 
 };

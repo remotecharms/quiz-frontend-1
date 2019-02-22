@@ -6,4 +6,10 @@ class Header extends React.Component {
     }
 };
 
+const styles = {
+    header : {
+        
+    }
+}
+
 export default Header; 

@@ -20,13 +20,30 @@ class App extends Component {
 
   }
 
+
+  createQuestion(num) {
+    this.setState({
+        question: quizData[num].question,
+        answers: [quizData[num].answers[0], quizData[num].answers[1], quizData[num].answers[2], quizData[num].answers[3]],
+        correct: quizData[num].correct,
+        num: this.state.num + 1
+    });
+}
+
+componentWillMount() {
+  let { num } = this.state;
+  this.createQuestion(num);
+}
+
   render() {
+    let {num, total, question, answers, correct, score} = this.state;
+
     return (
       <div className="container">
         <Header />
-        <Quiz question = "Question 1 passed as a prop" answer = "The first answer passed as a prop" />
-        <QuestionCounter />
-        <Score />
+        <Quiz question = {question} answer = {answers} correct = {correct}/>
+        <QuestionCounter num = {num} total = {total}/>
+        <Score score = {score} />
       </div>
     );
   };

@@ -41,7 +41,7 @@ componentWillMount() {
     return (
       <div className="container">
         <Header />
-        <Quiz question = {question} answer = {answers} correct = {correct}/>
+        <Quiz question = {question} answers = {answers} correct = {correct}/>
         <QuestionCounter num = {num} total = {total}/>
         <Score score = {score} />
       </div>

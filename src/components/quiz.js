@@ -12,19 +12,19 @@ class Quiz extends React.Component {
             <p style = {styles.question} >{this.props.question}</p>
             </div>
             <div className = "row">
-            <button type = "button" style = {styles.button}>{this.props.answer}</button>
+            <button type = "button" style = {styles.button}>{this.props.answers[0]}</button>
             </div>
             
             <div className = "row">
-            <button type = "button" style = {styles.button}>Answer 2 </button>
+            <button type = "button" style = {styles.button}>{this.props.answers[1]}</button>
             </div>
 
             <div className = "row">
-            <button type = "button" style = {styles.button} >Answer 3 </button>
+            <button type = "button" style = {styles.button} >{this.props.answers[2]}</button>
             </div>
 
             <div className = "row">
-            <button type = "button" style = {styles.button} >Answer 4</button>
+            <button type = "button" style = {styles.button} >{this.props.answers[3]}</button>
             </div>
 
         </div>
@@ -36,7 +36,9 @@ const styles = {
     button: {
        margin: "10px",
        width: "400px",
-       height: "50px"
+       height: "50px",
+       border: "2px",
+       fontSize: 20
     },
 
     question: {

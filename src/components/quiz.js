@@ -1,8 +1,16 @@
-import React from 'react'
+import React from 'react';
+import quizData from './quizData';
+
+console.log(quizData);
 
 class Quiz extends React.Component {
 
+    
+
+
     render() {
+
+
         return (
         <div className = "container">
 

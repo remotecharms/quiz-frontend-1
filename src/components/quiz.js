@@ -1,20 +1,18 @@
 import React from 'react';
-import quizData from './quizData';
-
 
 class Quiz extends React.Component {
 
+   
     render() {
-
 
         return (
         <div className = "container">
 
             <div className = "row">
-            <p style = {styles.question} >Question 1: some text goes here</p>
+            <p style = {styles.question} >{this.props.question}</p>
             </div>
             <div className = "row">
-            <button type = "button" style = {styles.button}>Answer 1 The first answer goes here and the button might need to be bigger</button>
+            <button type = "button" style = {styles.button}>{this.props.answer}</button>
             </div>
             
             <div className = "row">

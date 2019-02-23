@@ -1,30 +1,30 @@
-import React from 'react'
+import React from 'react';
 
 class Quiz extends React.Component {
 
+   
     render() {
+
         return (
         <div className = "container">
 
             <div className = "row">
-            <p>Question 1 some text goes here</p>
+            <p style = {styles.question} >{this.props.question}</p>
             </div>
-
-
             <div className = "row">
-            <button type = "button">Answer 1</button>
+            <button type = "button" style = {styles.button}>{this.props.answers[0]}</button>
             </div>
             
             <div className = "row">
-            <button type = "button">Answer 2 </button>
+            <button type = "button" style = {styles.button}>{this.props.answers[1]}</button>
             </div>
 
             <div className = "row">
-            <button type = "button">Answer 3 </button>
+            <button type = "button" style = {styles.button} >{this.props.answers[2]}</button>
             </div>
 
             <div className = "row">
-            <button type = "button">Answer 4</button>
+            <button type = "button" style = {styles.button} >{this.props.answers[3]}</button>
             </div>
 
         </div>
@@ -32,4 +32,18 @@ class Quiz extends React.Component {
     }
 }
 
+const styles = {
+    button: {
+       margin: "10px",
+       width: "400px",
+       height: "50px",
+       border: "2px",
+       fontSize: 20
+    },
+
+    question: {
+        fontSize: 30
+    }
+
+};
 export default Quiz;
